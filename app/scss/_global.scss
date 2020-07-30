@@ -15,7 +15,8 @@ a {
 }
 
 ul,
-li {
+li,
+ol {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -27,6 +28,17 @@ body {
     font-size: 16px;
     line-height: 30px;
     color: $text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -55,4 +67,136 @@ body {
     cursor: pointer;
     margin-left: auto;
     border-radius: 30px;
+}
+
+.big-btn__link {
+    width: 190px;
+    padding: 19px 10px;
+    font-size: 16px;
+    border-radius: 30px;
+    line-height: 17px;
+    cursor: pointer;
+}
+
+// класс который копируется для ссылок на img
+.item__preview {
+    position: relative;
+    margin-bottom: 20px;
+    transition: .5s;
+
+    &:hover {
+        .img-duble {
+            display: block;
+        }
+    }
+
+    img {
+        display: block;
+        height: 229px;
+        width: 360px;
+
+
+    }
+
+    .img-duble {
+        display: none;
+        position: absolute;
+        height: 229px;
+        width: 360px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &-link {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    a {
+        display: none;
+        padding: 15px 30px;
+        border: 1px solid #fff;
+        border-radius: 30px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: 500;
+
+        &:hover {
+
+            background-color: #fff;
+            color: $button;
+        }
+    }
+
+    a+a {
+        margin-left: 10px;
+    }
+}
+
+//класс который копируется для ссылок в итемах
+
+.item-links {
+    font-size: 15px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    .link-theme {
+        color: #000;
+        margin-right: 20px;
+    }
+
+    .img-theme {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 7px;
+    }
+
+    .link-type {
+        color: $type;
+    }
+
+    .img-type {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+
+// end класс который копируется для ссылок в итемах
+//класс который копируется для тайтла в итемах
+.item-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+// end класс который копируется для тайтла в итемах
+//цены в итемах
+.prise {
+    padding: 7px 15px;
+    background-color: #e6f1fd;
+    color: $button;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+    border-radius: 30px;
+    margin-right: 15px;
 }
