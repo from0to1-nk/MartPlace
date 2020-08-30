@@ -25,6 +25,8 @@ ol {
 html,
 body {
     height: 100%;
+    position: relative;
+    overflow-x: hidden;
 }
 
 body {
@@ -120,22 +122,20 @@ button {
     }
 
     img {
-        display: block;
         height: 229px;
-        width: 360px;
-
-
     }
 
     .img-duble {
         display: none;
         position: absolute;
         height: 229px;
-        width: 360px;
+
+        width: 100%;
         top: 0;
         right: 0;
         bottom: 0;
         border-radius: 4px;
+        opacity: .7;
     }
 
     &-link {
@@ -229,4 +229,124 @@ button {
     font-weight: 500;
     border-radius: 30px;
     margin-right: 15px;
+}
+
+.item__preview-image {
+    display: block;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    object-fit: contain;
+}
+
+.navigation__inner {
+    background-color: rgb(108, 108, 108);
+    min-height: 180px;
+    background-image: linear-gradient(to left, rgb(13, 62, 242), rgba(45, 47, 199, .80), rgb(76, 31, 156));
+    padding: 40px 0 60px;
+}
+
+.breadcrambs {
+    li {
+        display: inline-block;
+        position: relative;
+
+        &+li {
+            margin-left: 25px;
+
+            &::before {
+                content: "/";
+                position: absolute;
+                color: #fff;
+                left: -17px;
+            }
+        }
+    }
+
+    a {
+        color: #fff;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .current-page {
+        color: #bfcad7;
+
+    }
+}
+
+.current-page__title {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.pagination {
+    padding: 30px 0 120px;
+    background-color: #eff1f5;
+}
+
+.pagination-list {
+    text-align: right;
+
+    li {
+        display: inline-block;
+        width: 50px;
+        height: 38px;
+        border-radius: 30px;
+        background-color: #fff;
+        text-align: center;
+        line-height: 38px;
+
+        a,
+        span {
+            display: block;
+            color: #747b86;
+        }
+    }
+
+    .pagination-page:hover:not(.active) {
+        background-color: #ddd;
+    }
+
+    .pagination-page.active {
+        background-color: $button;
+
+        a,
+        span {
+            color: #fff;
+        }
+    }
+
+    .pagination-arrow {
+        background-color: #7347c1;
+        width: 50px;
+        height: 38px;
+        border-radius: 30px;
+        line-height: 43px;
+
+        svg {
+            width: 16px;
+
+            path {
+                fill: #fff;
+            }
+        }
+    }
+
+
+}
+
+
+
+.pagination-arrow.disabled {
+    background-color: #fff;
+    border-radius: 30px;
+
+    svg {
+        path {
+            fill: #000;
+        }
+    }
 }
