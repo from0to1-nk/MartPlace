@@ -1550,14 +1550,34 @@
 
 }
 
+.products__box-item.nevest-item {
+    .rateYo {
+        position: absolute;
+        right: 0;
+    }
+
+    .item-info {
+        .info__inner {
+            position: relative;
+        }
+    }
+}
+
+
+
+.products__box-item.nevest-item {
+    margin-left: 30px;
+    flex-basis: calc(33.33333% - 30px);
+}
 
 
 .products__box {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    justify-content: start;
+    margin-left: -30px;
     margin-bottom: 60px;
-    justify-content: space-between;
+
 
     &-item {
         max-width: 360px;
@@ -1575,7 +1595,7 @@
         }
 
         .like {
-            margin-right: 15px;
+            margin-right: 96px;
             color: #6f7d8d;
 
             svg {
