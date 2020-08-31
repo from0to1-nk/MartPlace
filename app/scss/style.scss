@@ -394,16 +394,17 @@
     border-top: 0px solid $button;
     position: absolute;
     box-shadow: 0px 5px 40px 0px rgba(82, 85, 90, 0.2);
-    width: 100%;
+    //width: 100%;
     background-color: #fff;
     padding: 0 15px 0 21px;
-    z-index: 2;
+    z-index: 20;
     transition: all .3s;
     height: 0;
     overflow: hidden;
     display: flex;
+    margin-left: -40px;
 
-    .mega-menu__item+.mega-menu__item {
+    .mega-menu__item {
         margin-left: 40px;
     }
 
@@ -522,7 +523,7 @@
     width: 384px;
     top: 99px;
     right: 27px;
-
+    z-index: 20;
 
     &:after {
         top: -18px;
@@ -536,6 +537,7 @@
     top: 99px;
     left: -27px;
     transition: all .3s;
+    z-index: 20;
 }
 
 .basket__menu {
@@ -543,6 +545,7 @@
     top: 99px;
     right: -27px;
     transition: all .3s;
+    z-index: 20;
 
     &:after {
         top: -18px;
@@ -554,6 +557,7 @@
     padding-right: 25px;
     padding-left: 25px;
     transition: all .3s;
+
 }
 
 .notification__menu-top,
@@ -2647,7 +2651,7 @@
 
 //category-page
 .aside-back {
-    transform: translateX(100%);
+    transform: translateX(200%);
     transition: opacity .5s ease-in-out;
     opacity: 0;
     position: fixed;
@@ -2918,6 +2922,7 @@
     justify-content: space-between;
     max-width: 590px;
     width: 100%;
+    align-items: center;
 
     .jq-selectbox__trigger {
         border-left: none;
@@ -2984,6 +2989,7 @@
     border-radius: 3px;
     padding: 10px 20px;
     display: flex;
+    line-height: 10px;
 
     button+button {
         margin-left: 15px;
@@ -3320,7 +3326,7 @@
     }
 
     .products__item-content {
-        max-width: 259px;
+        // max-width: 259px;
         width: 100%;
         border-right: 1px solid #e7e7e7;
         padding: 0px 20px 0px;
@@ -3891,6 +3897,11 @@
         margin-left: 30px;
     }
 }
+
+.favorite-sorts__btn {
+    display: none;
+}
+
 
 .button__add-favorites {
     position: relative;

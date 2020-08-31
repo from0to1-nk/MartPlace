@@ -126,6 +126,7 @@ $(function () {
     $('input[type="file"], input[type="radio"], select').styler();
 
 
+
     if (document.documentElement.clientWidth < 901) {
         $('.room__info-btn').on('click', function () {
             $('.user__menu').slideToggle()
@@ -181,6 +182,9 @@ $(function () {
     });
     $('.category-sorts__btn').on('click', function () {
         $('.category-filter__sort-one,.category-filter__sort-two').slideToggle()
+    });
+    $('.favorite-sorts__btn').on('click', function () {
+        $('.category-filter__representation,.favorites-filter__sort-one,.favorites-filter__sort-two').slideToggle()
     });
     var mixer = mixitup('.category-page__products,.products__box,.favorites__box,.products__box');
 
